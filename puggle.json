@@ -1,0 +1,21 @@
+{
+  "version": "0.5.5",
+  "projectName": "toolkit-shared",
+  "preset": {
+    "name": "robb-j:ts-node",
+    "version": "0.2.2"
+  },
+  "plugins": {
+    "npm": "0.1.0"
+  },
+  "params": {
+    "npm": {
+      "packageName": "@openlab/deconf-shared",
+      "packageInfo": "Shared code between deconf-ui-toolkit and deconf-api-toolkit",
+      "repository": "digitalinteraction/deconf-shared"
+    },
+    "cli": {
+      "enabled": false
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "@openlab/deconf-shared",
+  "description": "Shared code between deconf-ui-toolkit and deconf-api-toolkit",
+  "version": "0.0.0",
+  "private": true,
+  "repository": "digitalinteraction/deconf-shared",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "build": "tsc",
+    "lint": "tsc --noEmit",
+    "prettier": "prettier --write '**/*.{js,json,css,md,ts,tsx}'",
+    "preversion": "npm run build"
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "superstruct": "^0.14.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.1",
+    "@types/jest": "^26.0.20",
+    "typescript": "^3.9.7",
+    "ts-node": "^8.10.2",
+    "@types/node": "^14.14.25",
+    "prettier": "^2.2.1",
+    "yorkie": "^2.0.0",
+    "lint-staged": "^10.5.4",
+    "nodemon": "^2.0.7"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,ts,tsx}": [
+      "prettier --write"
+    ]
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.js"
+}
