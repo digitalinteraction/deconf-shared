@@ -1,7 +1,7 @@
 {
   "name": "@openlab/deconf-shared",
   "description": "Shared code between deconf-ui-toolkit and deconf-api-toolkit",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "repository": "digitalinteraction/deconf-shared",
   "author": "",
   "license": "MIT",
