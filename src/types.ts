@@ -89,6 +89,7 @@ export interface Session {
   isFeatured: boolean
   visibility: SessionVisibility
   state: SessionState
+  participantCap: number | null
 
   proxyUrl?: string
   hideFromSchedule: boolean

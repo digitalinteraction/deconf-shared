@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2.0.0
+
+**changes**
+
+```diff
++Session.participantCap number | null
+```
+
 ## 1.0.1
 
 **fixes**
