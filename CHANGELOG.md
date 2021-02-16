@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2.0.1
+
+**fixes**
+
+- Include the build this time
+
 ## 2.0.0
 
 **changes**
