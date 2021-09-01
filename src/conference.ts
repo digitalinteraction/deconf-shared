@@ -1,33 +1,32 @@
-// This file defines shared types for the api & ui toolkits
+import { JsonRepresentation, Localised } from './utils'
 
 //
-// Conference
+// Conference module
 //
 
-export interface Attendance {
-  id: number
-  created: Date
-  attendee: number
-  session: string
-}
-
-export interface ConfigFlag {
+/** A flag to enable/disable/show/hide a page in the app */
+export interface PageFlag {
   enabled: boolean
   visible: boolean
 }
 
-export interface ConfigSettings {
-  atrium: ConfigFlag
-  whatsOn: ConfigFlag
-  schedule: ConfigFlag
-  coffeeChat: ConfigFlag
-  helpDesk: ConfigFlag
+/** General configuration for a conference */
+export interface ConferenceConfig {
+  atrium: PageFlag
+  whatsOn: PageFlag
+  schedule: PageFlag
+  coffeeChat: PageFlag
+  helpDesk: PageFlag
 
   startDate: Date
   endDate: Date
   isStatic: boolean
 }
 
+/** ConferenceConfig when stored as JSON */
+export type ConferenceConfigJson = JsonRepresentation<ConferenceConfig>
+
+/** A localised link for a session */
 export interface SessionLink {
   type: string
   url: string
@@ -35,28 +34,7 @@ export interface SessionLink {
   language: string
 }
 
-export type Localised = Record<string, string>
-
-export interface RegisterRequest {
-  name: string
-  email: string
-  language: string
-  country: string
-  affiliation: string
-}
-
-export interface Registration {
-  id: number
-  created: Date
-  name: string
-  email: string
-  language: string
-  country: string
-  affiliation: string
-  verified: boolean
-  consented: Date
-}
-
+/** The various states a session can be */
 export enum SessionState {
   draft = 'draft',
   accepted = 'accepted',
@@ -65,11 +43,13 @@ export enum SessionState {
   confirmed = 'confirmed',
 }
 
+/** The various visiblities a session can be */
 export enum SessionVisibility {
   public = 'public',
   private = 'private',
 }
 
+/** A virtual session being hosted at a conference */
 export interface Session {
   id: string
   type: string
@@ -91,16 +71,12 @@ export interface Session {
   state: SessionState
   participantCap: number | null
 
+  // TODO: review these
   proxyUrl?: string
   hideFromSchedule: boolean
 }
 
-// export enum SessionLayout {
-//   plenary = 'plenary',
-//   workshop = 'workshop',
-//   coffeechat = 'coffeechat',
-// }
-
+/** A type of session */
 export interface SessionType {
   id: string
   iconGroup: string
@@ -109,18 +85,17 @@ export interface SessionType {
   title: Localised
 }
 
-export interface SessionSlotJson {
-  id: string
-  start: string
-  end: string
-}
-
+/** A time range that a session can be hosted in */
 export interface SessionSlot {
   id: string
   start: Date
   end: Date
 }
 
+/** A SessionSlot stored as JSON */
+export type SessionSlotJson = JsonRepresentation<SessionSlot>
+
+/** A key person who is at a session */
 export interface Speaker {
   id: string
   name: string
@@ -129,34 +104,14 @@ export interface Speaker {
   headshot?: string
 }
 
+/** A has-many taxonomy that a session can have */
 export interface Theme {
   id: string
   title: Localised
 }
 
+/** A has-one taxonomy that a session can have */
 export interface Track {
   id: string
   title: Localised
-}
-
-export interface Interpreter {
-  id: string
-  name: string
-  email: string
-}
-
-//
-// Authentication
-//
-
-export interface EmailLoginToken {
-  kind: 'email-login'
-  sub: number
-  user_roles: string[]
-}
-export interface AuthToken {
-  kind: 'auth'
-  sub: number
-  user_roles: string[]
-  user_lang: string
 }

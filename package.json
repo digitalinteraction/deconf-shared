@@ -5,6 +5,8 @@
   "repository": "digitalinteraction/deconf-shared",
   "author": "",
   "license": "MIT",
+  "main": "dist/module.js",
+  "types": "dist/module.d.js",
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
@@ -49,7 +51,5 @@
     "*.{js,json,css,md,ts,tsx}": [
       "prettier --write"
     ]
-  },
-  "main": "dist/index.js",
-  "types": "dist/index.d.js"
+  }
 }
