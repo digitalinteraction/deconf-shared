@@ -8,6 +8,7 @@ export interface RegisterRequest {
   language: string
   country: string
   affiliation: string
+  userData: unknown
 }
 
 export interface Registration {
@@ -20,4 +21,5 @@ export interface Registration {
   affiliation: string
   verified: boolean
   consented: Date
+  userData: unknown
 }
