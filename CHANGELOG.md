@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 3.2.0
+
+**features**
+
+- Add `RegistrationJson`
+- Add `AttendanceJson`
+
 ## 3.1.0
 
 **features**

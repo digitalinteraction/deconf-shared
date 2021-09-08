@@ -2,6 +2,9 @@
 // Registration module
 //
 
+import { JsonRepresentation } from './utils'
+
+/** A request to register */
 export interface RegisterRequest {
   name: string
   email: string
@@ -11,6 +14,7 @@ export interface RegisterRequest {
   userData: unknown
 }
 
+/** A registration record with unknown `userData` */
 export interface Registration {
   id: number
   created: Date
@@ -23,3 +27,6 @@ export interface Registration {
   consented: Date
   userData: unknown
 }
+
+/** Registration when stored as JSON */
+export type RegistrationJson = JsonRepresentation<Registration>
