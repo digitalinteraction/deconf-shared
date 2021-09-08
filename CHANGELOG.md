@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 3.1.0
+
+**features**
+
+- Add `RegisterRequest#userData`
+- Add `Registration#userData`
+
 ## 3.0.0
 
 **breaking changes**
