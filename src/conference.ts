@@ -26,13 +26,22 @@ export interface ConferenceConfig {
 /** ConferenceConfig when stored as JSON */
 export type ConferenceConfigJson = JsonRepresentation<ConferenceConfig>
 
-/** A localised link for a session */
-export interface SessionLink {
+/**
+ * A localised link for a session
+ */
+export interface LocalisedLink {
+  /** @deprecated Link parsing is preferred */
   type: string
   url: string
   title?: string
   language: string
 }
+
+/**
+ * A localised link for a session
+ * @deprecated
+ */
+export type SessionLink = LocalisedLink
 
 /** The various states a session can be */
 export enum SessionState {
