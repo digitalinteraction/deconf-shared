@@ -115,3 +115,14 @@ export interface Track {
   id: string
   title: Localised
 }
+
+/** A full conference schedule with all data types */
+export interface ScheduleRecord {
+  sessions: Session[]
+  settings: ConferenceConfig
+  slots: SessionSlot[]
+  speakers: Speaker[]
+  themes: Theme[]
+  tracks: Track[]
+  types: SessionType[]
+}
