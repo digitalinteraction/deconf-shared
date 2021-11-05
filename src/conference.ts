@@ -80,7 +80,6 @@ export interface Session {
   state: SessionState
   participantCap: number | null
 
-  // TODO: review these
   proxyUrl?: string
   hideFromSchedule: boolean
 }
