@@ -39,7 +39,7 @@ export interface LocalisedLink {
 
 /**
  * A localised link for a session
- * @deprecated
+ * @deprecated use `LocalisedLink`
  */
 export type SessionLink = LocalisedLink
 
