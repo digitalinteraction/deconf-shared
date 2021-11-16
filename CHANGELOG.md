@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 3.3.0
+
+**features**
+
+- Add API Routes/Sockets return types so all API calls can strongly type their response
+  - `UserSessionAttendance`
+  - `UserAttendance`
+  - `UserAttendanceJson`
+  - `SessionLinks`
+  - `SessionLintResult`
+  - `LocalisedContent`
+  - `UserRegistration`
+  - `UserRegistrationJson`
+
 ## 3.2.0
 
 **features**

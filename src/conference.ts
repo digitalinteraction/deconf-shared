@@ -23,7 +23,7 @@ export interface ConferenceConfig {
   isStatic: boolean
 }
 
-/** ConferenceConfig when stored as JSON */
+/** A `ConferenceConfig` when stored as JSON */
 export type ConferenceConfigJson = JsonRepresentation<ConferenceConfig>
 
 /**
@@ -103,7 +103,7 @@ export interface SessionSlot {
   end: Date
 }
 
-/** A SessionSlot stored as JSON */
+/** A `SessionSlot` stored as JSON */
 export type SessionSlotJson = JsonRepresentation<SessionSlot>
 
 /** A key person who is at a session */
@@ -137,3 +137,16 @@ export interface ScheduleRecord {
   tracks: Track[]
   types: SessionType[]
 }
+
+/** Links that belong to a `Session` */
+export interface SessionLinks {
+  links: LocalisedLink[]
+}
+
+/** Linter messages for a `Schedule` */
+export type SessionLintResult = Array<{
+  kind: string
+  title: string
+  subtitle: string
+  messages: string[]
+}>

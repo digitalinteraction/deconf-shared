@@ -18,5 +18,19 @@ export interface Attendance {
   session: string
 }
 
-/** Attendance when stored as JSON */
+/** `Attendance` when stored as JSON */
 export type AttendanceJson = JsonRepresentation<Attendance>
+
+/** Attendance information for a user in a session */
+export interface UserSessionAttendance {
+  isAttending: boolean
+  sessionCount: number
+}
+
+/** All a user's attendance */
+export interface UserAttendance {
+  attendance: Attendance[]
+}
+
+/** `UserAttendance` stored in json */
+export type UserAttendanceJson = JsonRepresentation<UserAttendance>

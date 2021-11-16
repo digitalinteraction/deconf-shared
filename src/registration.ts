@@ -30,3 +30,11 @@ export interface Registration {
 
 /** Registration when stored as JSON */
 export type RegistrationJson = JsonRepresentation<Registration>
+
+/** The registration belonging to someone */
+export interface UserRegistration {
+  registration: Registration
+}
+
+/** UserRegistration represented in JSON */
+export type UserRegistrationJson = JsonRepresentation<UserRegistration>
