@@ -13,8 +13,7 @@
     "build": "tsc",
     "lint": "tsc --noEmit",
     "prettier": "prettier --write '**/*.{js,json,css,md,ts,tsx}'",
-    "preversion": "npm run build",
-    "postversion": "git push --follow-tags"
+    "preversion": "npm run build"
   },
   "keywords": [],
   "engines": {
