@@ -150,3 +150,8 @@ export type SessionLintResult = Array<{
   subtitle: string
   messages: string[]
 }>
+
+/** A private link to a user's calendar */
+export interface PrivateCalendar {
+  url: URL
+}

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 3.5.0
+
+**features**
+
+- Add `PrivateCalendar`
+
 ## 3.4.0
 
 **features**
