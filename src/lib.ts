@@ -2,7 +2,10 @@
 // lib module
 //
 
-/** Generic config for a deconf deployment */
+/**
+ * Generic config for a deconf deployment
+ * @deprecated
+ */
 export interface DeconfConfig {
   admins: Array<{ email: string }>
   mail: {
