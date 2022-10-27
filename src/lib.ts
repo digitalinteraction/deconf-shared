@@ -26,6 +26,7 @@ export interface EmailLoginToken {
   kind: 'email-login'
   sub: number
   user_roles: string[]
+  redirect?: string
 }
 
 /** A decoded JWT to provide app authorization */

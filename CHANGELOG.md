@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 3.6.0
+
+**features**
+
+- Add `EmailLoginToken#redirect`, an optional URL to visit after logging in
+
 ## 3.5.0
 
 **features**
