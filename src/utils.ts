@@ -8,3 +8,6 @@ export type JsonRepresentation<T> = T extends Date
 
 /** An object of things that have been localised */
 export type Localised = Record<string, string | undefined>
+
+/** An American object of things that have been localised */
+export type Localized = Localised

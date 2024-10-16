@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 4.0.0
+
+**breaking**
+
+- Remove `settings` from `ScheduleRecord
+
 ## 3.6.0
 
 **features**

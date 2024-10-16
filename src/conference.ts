@@ -68,7 +68,7 @@ export interface Session {
   coverImage?: string
   title: Localised
   content: Localised
-  links: SessionLink[]
+  links: LocalisedLink[]
   hostLanguages: string[]
   enableInterpretation: boolean
   speakers: string[]
@@ -130,12 +130,14 @@ export interface Track {
 /** A full conference schedule with all data types */
 export interface ScheduleRecord {
   sessions: Session[]
-  settings: ConferenceConfig
   slots: SessionSlot[]
   speakers: Speaker[]
   themes: Theme[]
   tracks: Track[]
   types: SessionType[]
+
+  /** @deprecated */
+  settings?: ConferenceConfig
 }
 
 /** Links that belong to a `Session` */
